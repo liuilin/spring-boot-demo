@@ -23,7 +23,7 @@ import java.util.stream.Collectors;
 
 /**
  * <p>
- * 测试操作 MongoDb
+ * 测试操作 MongoDb.
  * </p>
  *
  * @author yangkai.shen
