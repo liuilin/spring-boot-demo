@@ -84,6 +84,7 @@ public class ArticleRepositoryTest extends SpringBootDemoMongodbApplicationTests
     public void testDelete() {
         // 根据主键删除
         articleRepo.deleteById(1L);
+//        articleRepo.findById(1L).ifPresent(article -> System.out.println("ArticleConvert.INSTANCE.articleToArticleVO(article) = " + ArticleConvert.INSTANCE.articleToArticleVO(article)));
 
         // 全部删除
         articleRepo.deleteAll();

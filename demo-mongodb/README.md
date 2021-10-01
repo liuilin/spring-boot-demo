@@ -6,10 +6,10 @@
 
 作者编写本demo时，MongoDB 最新版本为 `4.1`，使用 docker 运行，下面是所有步骤：
 
-1. 下载镜像：`docker pull mongo:4.1`
-2. 运行容器：`docker run -d -p 27017:27017 -v /Users/yangkai.shen/docker/mongo/data:/data/db --name mongo-4.1 mongo:4.1`
-3. 停止容器：`docker stop mongo-4.1`
-4. 启动容器：`docker start mongo-4.1`
+1. 下载镜像：`docker pull mongo`
+2. 运行容器：`docker run -d -p 27017:27017 -v ~/docker/mongo/data:/data/db --name mongo-demo mongo`
+3. 停止容器：`docker stop mongo`
+4. 启动容器：`docker start mongo`
 
 ## pom.xml
 
