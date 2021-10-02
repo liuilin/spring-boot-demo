@@ -50,7 +50,7 @@ ENTRYPOINT ["java","-Djava.security.egd=file:/dev/urandom","-jar","/app.jar"]
 3. 运行
 
    ```bash
-   $ docker run -d -p 9090:8080 spring-boot-demo-docker
+   $ docker run --name demo-docker -d -p 9090:8080 spring-boot-demo-docker
    ```
 
 ###  使用 maven 插件打包
