@@ -41,7 +41,7 @@ ENTRYPOINT ["java","-Djava.security.egd=file:/dev/urandom","-jar","/app.jar"]
 
    ```bash
    $ docker images
-   
+
    REPOSITORY                                                        TAG                 IMAGE ID            CREATED             SIZE
    spring-boot-demo-docker                                           latest	      bc29a29ffca0        2 hours ago         119MB
    openjdk                                                           8-jdk-alpine        97bc1352afde        5 weeks ago         103MB
@@ -61,8 +61,8 @@ ENTRYPOINT ["java","-Djava.security.egd=file:/dev/urandom","-jar","/app.jar"]
    <properties>
        <dockerfile-version>1.4.9</dockerfile-version>
    </properties>
-   
-   <plugins>      
+
+   <plugins>
        <plugin>
            <groupId>com.spotify</groupId>
            <artifactId>dockerfile-maven-plugin</artifactId>
@@ -97,7 +97,7 @@ ENTRYPOINT ["java","-Djava.security.egd=file:/dev/urandom","-jar","/app.jar"]
 
    ```bash
    $ docker images
-   
+
    REPOSITORY                                                        TAG                 IMAGE ID            CREATED             SIZE
    spring-boot-demo-docker                                           1.0.0-SNAPSHOT      bc29a29ffca0        2 hours ago         119MB
    openjdk                                                           8-jdk-alpine        97bc1352afde        5 weeks ago         103MB
