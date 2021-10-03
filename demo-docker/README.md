@@ -37,7 +37,7 @@ ENTRYPOINT ["java","-jar","/app.jar"]
    $ docker images
 
    REPOSITORY                                                        TAG                 IMAGE ID            CREATED             SIZE
-   spring-boot-demo-docker                                           latest	      bc29a29ffca0        2 hours ago         119MB
+   demo-docker                                                       latest	      bc29a29ffca0        2 hours ago         119MB
    openjdk                                                           8-jdk-alpine        97bc1352afde        5 weeks ago         103MB
    ```
 
@@ -86,7 +86,7 @@ ENTRYPOINT ["java","-jar","/app.jar"]
 2. 执行mvn打包命令，因为插件中 `execution` 节点配置了 package，所以会在打包的时候自动执行 build 命令。
 
    ```bash
-   $ mvn clean package -Dmaven.test.skip=true
+   $ mvn clean package '-Dmaven.test.skip=true'
    ```
 
 3. 查看镜像
@@ -95,14 +95,14 @@ ENTRYPOINT ["java","-jar","/app.jar"]
    $ docker images
 
    REPOSITORY                                                        TAG                 IMAGE ID            CREATED             SIZE
-   spring-boot-demo-docker                                           1.0.0-SNAPSHOT      bc29a29ffca0        2 hours ago         119MB
+   demo-docker                                                       1.0.0-SNAPSHOT      bc29a29ffca0        2 hours ago         119MB
    openjdk                                                           8-jdk-alpine        97bc1352afde        5 weeks ago         103MB
    ```
 
 4. 运行
 
    ```bash
-   $ docker run -d -p 9090:8080 spring-boot-demo-docker:1.0.0-SNAPSHOT
+   $ docker run -d -p 9090:8080 demo-docker:1.0.0-SNAPSHOT
    ```
 
 ## 参考
