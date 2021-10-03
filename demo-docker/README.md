@@ -7,24 +7,18 @@
 ```dockerfile
 # 基础镜像
 FROM openjdk:8-jdk-alpine
-
 # 作者信息
-MAINTAINER "Yangkai.Shen 237497819@qq.com"
-
+MAINTAINER "liu1142865396@gmail.com"
 # 添加一个存储空间
 VOLUME /tmp
-
 # 暴露8080端口
 EXPOSE 8080
-
-# 添加变量，如果使用dockerfile-maven-plugin，则会自动替换这里的变量内容
-ARG JAR_FILE=target/spring-boot-demo-docker.jar
-
-# 往容器中添加jar包
+# 添加变量，如果使用 dockerfile-maven-plugin，则会自动替换这里的变量内容
+ARG JAR_FILE=target/*.jar
+# 往容器中添加 jar 包
 ADD ${JAR_FILE} app.jar
-
 # 启动镜像自动运行程序
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/urandom","-jar","/app.jar"]
+ENTRYPOINT ["java","-jar","/app.jar"]
 ```
 
 ## 打包方式
@@ -47,10 +41,12 @@ ENTRYPOINT ["java","-Djava.security.egd=file:/dev/urandom","-jar","/app.jar"]
    openjdk                                                           8-jdk-alpine        97bc1352afde        5 weeks ago         103MB
    ```
 
-3. 运行
+3. 运行 / 停止
 
    ```bash
    $ docker run --name demo-docker -d -p 9090:8080 spring-boot-demo-docker
+   $ docker stop demo-docker
+   $ docker start demo-docker
    ```
 
 ###  使用 maven 插件打包
