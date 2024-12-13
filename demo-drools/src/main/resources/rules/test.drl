@@ -1,0 +1,13 @@
+package rules;
+import com.demo.rules.CustomerManager
+import com.demo.rules.SaleDtl
+dialect  "mvel"
+
+rule "test"
+    when
+
+        $cm:CustomerManager(name=="zhangsan1")
+        $dtl:SaleDtl(clientManagerId==$cm.id)
+    then
+        System.out.println($cm.name);
+end
