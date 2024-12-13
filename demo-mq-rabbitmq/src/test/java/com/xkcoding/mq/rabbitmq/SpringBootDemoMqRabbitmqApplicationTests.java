@@ -45,7 +45,7 @@ public class SpringBootDemoMqRabbitmqApplicationTests {
      */
     @Test
     public void sendTopic2() {
-        rabbitTemplate.convertAndSend(RabbitConsts.TOPIC_MODE_QUEUE, "ccc.queue", new MessageStruct("topic message"));
+        rabbitTemplate.convertAndSend(RabbitConsts.TOPIC_MODE_QUEUE, "key.cc", new MessageStruct("topic message"));
     }
 
     /**
